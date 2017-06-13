@@ -78,7 +78,7 @@ val_data, val_label = data_3, label_3
 test_data, test_label = data_4, label_4
 
 ####################################################################
-########### BEGIN : Implementing the RNN-LSTM Model ################
+############# BEGIN : Implementing the CNN Model ###################
 ####################################################################
 
 #defining the hyperparameter

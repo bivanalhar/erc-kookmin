@@ -102,8 +102,10 @@ with tf.device("/gpu:0"):
 	last = tf.gather(val, int(val.get_shape()[0]) - 1)
 
 	#defining the initialized value for the weight and bias
-	weight = tf.Variable(tf.random_normal(shape = [hidden_nodes, int(target.get_shape()[1])]))
-	bias = tf.Variable(tf.constant(0.1, shape = [int(target.get_shape()[1])]))
+	# weight = tf.Variable(tf.random_normal(shape = [hidden_nodes, int(target.get_shape()[1])]))
+	# bias = tf.Variable(tf.constant(0.1, shape = [int(target.get_shape()[1])]))
+	weight = tf.get_variable("weight", shape = [hidden_nodes, int(target.get_shape()[1])], initializer = tf.contrib.layers.xavier_initializer())
+	bias = tf.get_variable("bias", shape = [int(target.get_shape()[1])], initializer = tf.contrib.layers.xavier_initializer())
 
 	#now defining the prediction vector, which should be the softmax function after being multiplied
 	#by W and b, then we define the cross entropy
@@ -124,15 +126,15 @@ with tf.device("/gpu:0"):
 	#initializing all the trainable parameters here
 	init_op = tf.global_variables_initializer()
 
-f = open("170612_erc_rnn_pred.txt", 'w')
-# f.write("Result of the experiment\n\n")
+f = open("170613_erc_rnn.txt", 'w')
+f.write("Result of the experiment\n\n")
 
 batch_size_list = [128]
 hidden_layer_list = [128]
-learning_rate_list = [1e-3]
-epoch_list_run = [200]
-dropout_list = [0.5]
-regularizer_parameter = [0.001]
+learning_rate_list = [1e-3, 1e-4]
+epoch_list_run = [1000]
+dropout_list = [0.9, 0.8, 0.7, 0.5, 0.3]
+regularizer_parameter = [0.001, 0.01, 0.1]
 l2Regularize_list = [True]
 
 count_exp = 1
@@ -163,9 +165,9 @@ for batch_size1 in batch_size_list:
 							print("l2Reg = " + str(l2_regularize))
 							print("reg_param = " + str(reg_param))
 
-							# f.write("setting up the experiment with\n")
-							# f.write("batch size = " + str(batch_size) + ", hidden nodes = " + str(hidden_nodes) + ", learning rate = " + str(learning_rate) + "\n")
-							# f.write("training epoch = " + str(training_epoch) + ", dropout rate = " + str(1 - dropout_rate) + ", reg_param = " + str(reg_param) + "\n\n")
+							f.write("setting up the experiment with\n")
+							f.write("batch size = " + str(batch_size) + ", hidden nodes = " + str(hidden_nodes) + ", learning rate = " + str(learning_rate) + "\n")
+							f.write("training epoch = " + str(training_epoch) + ", dropout rate = " + str(1 - dropout_rate) + ", reg_param = " + str(reg_param) + "\n\n")
 
 							with tf.Session() as sess:
 								sess.run(init_op)
@@ -191,32 +193,32 @@ for batch_size1 in batch_size_list:
 									# sess.run(target_exp, feed_dict = {data : train_data, target : train_label})
 									# sess.run(arg_pred, feed_dict = {data : train_data, target : train_label})
 
-									# if epoch in [99, 199, 299, 499, 699, 999]:
-									# 	f.write("During the " + str(epoch+1) + "-th epoch:\n")
-									# 	f.write("Training Accuracy = " + str(sess.run(accuracy, feed_dict = {data : train_data, target : train_label})) + "\n")
-									# 	f.write("Validation Accuracy = " + str(sess.run(accuracy, feed_dict = {data : val_data, target : val_label})) + "\n")
-									# 	f.write("Testing Accuracy = " + str(sess.run(accuracy, feed_dict = {data : test_data, target : test_label})) + "\n\n")
+									if epoch in [9, 19, 29, 49, 99, 199, 299, 499, 699, 999]:
+										f.write("During the " + str(epoch+1) + "-th epoch:\n")
+										f.write("Training Accuracy = " + str(sess.run(accuracy, feed_dict = {data : train_data, target : train_label})) + "\n")
+										f.write("Validation Accuracy = " + str(sess.run(accuracy, feed_dict = {data : val_data, target : val_label})) + "\n")
+										f.write("Testing Accuracy = " + str(sess.run(accuracy, feed_dict = {data : test_data, target : test_label})) + "\n\n")
 								print("Optimization Finished")
 
 								# saver.save(sess, save_path)
-								for i in range(len(test_data)):
-									pred = sess.run(prediction, feed_dict = {data : test_data[i:i+1]})
-									f.write(str(pred[0]) + "\n")
+								# for i in range(len(test_data)):
+								# 	pred = sess.run(prediction, feed_dict = {data : test_data[i:i+1]})
+								# 	f.write(str(pred[0]) + "\n")
 
-								# plt.plot(epoch_list, cost_list)
-								# plt.xlabel("Epoch (dropout = " + str(dropout_rate) + ";l2Reg = " + str(reg_param) + ";learn_rate = " + str(learning_rate) + ")")
-								# plt.ylabel("Cost Function")
+								plt.plot(epoch_list, cost_list)
+								plt.xlabel("Epoch (dropout = " + str(dropout_rate) + ";l2Reg = " + str(reg_param) + ";learn_rate = " + str(learning_rate) + ")")
+								plt.ylabel("Cost Function")
 
-								# training_accuracy = sess.run(accuracy, feed_dict = {data : train_data, target : train_label})
-								# validation_accuracy = sess.run(accuracy, feed_dict = {data : val_data, target : val_label})
-								# testing_accuracy = sess.run(accuracy, feed_dict = {data : test_data, target : test_label})
+								training_accuracy = sess.run(accuracy, feed_dict = {data : train_data, target : train_label})
+								validation_accuracy = sess.run(accuracy, feed_dict = {data : val_data, target : val_label})
+								testing_accuracy = sess.run(accuracy, feed_dict = {data : test_data, target : test_label})
 								
-								# print("Finished Accuracy Calculation. Now saving the learning curve")
+								print("Finished Accuracy Calculation. Now saving the learning curve")
 
-								# plt.title("Train Acc = " + str(training_accuracy * 100) + "\nTest Acc = " + str(testing_accuracy * 100))
+								plt.title("Train Acc = " + str(training_accuracy * 100) + "\nTest Acc = " + str(testing_accuracy * 100))
 
-								# plt.savefig("170612_fig_rnn Exp " + str(count_exp) + ".png")
+								plt.savefig("170613_fig_rnn Exp " + str(count_exp) + ".png")
 
-								# plt.clf()
+								plt.clf()
 
-								# count_exp += 1
+								count_exp += 1

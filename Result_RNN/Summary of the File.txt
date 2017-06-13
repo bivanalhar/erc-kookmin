@@ -1,0 +1,3 @@
+seq-to-point 170612 : using the normal distribution as the initializer for both weight and bias
+
+seq-to-point 170613 : using the Xavier-Glorot initializer for the weight and bias
