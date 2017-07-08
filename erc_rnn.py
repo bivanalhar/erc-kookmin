@@ -28,35 +28,38 @@ def seq2point_preprocess(data_file, label_file):
 			data_list.append([np.float32(i) for i in row])
 	data_csv.close()
 
+	#getting the z-score for the data list
+	data_list = np.transpose(np.asarray(data_list))
+	mean_list = np.mean(data_list, axis = 0)
+	stdev_list = np.std(data_list, axis = 0)
+
+	# data_list = np.transpose(data_list)
+
+	data_list = (data_list - mean_list) / stdev_list
+	data_list = np.clip(np.transpose(data_list), -4, 4)
+
 	#second phase : storing all the label into the appropriate data structure
 	label_f = open(label_file, 'r')
 	for line in label_f:
 		label_list.append(line.strip())
 	label_f.close()
 
-	#third phase : divide the data and label into group of 5
+	#third phase : divide the data and label into group of 6
 	data_temp = []
 	label_temp = []
 
 	data_list_final = []
 	label_list_final = []
 
-	for i in range(len(data_list)):
+	for i in range(len(data_list) - 5):
 		# print(i)
-		data_temp.append(data_list[i])
-		label_temp.append(label_list[i])
-
-		if len(data_temp) % 5 == 0 or i == len(data_list) - 1:
-			data_list_final.append(data_temp)
-			label_list_final.append(one_hot(label_temp[-1]))
-			data_temp = []
-			label_temp = []
-
-	# print(np.shape(data_list_final))
-		# print(data_list_final)
-	if len(data_list_final[-1]) != 5:
-		for i in range(5 - len(data_list_final[-1])):
-			data_list_final[-1].insert(0, padding_zero)
+		for j in range(6):
+			data_temp.append(data_list[i + j])
+			label_temp.append(label_list[i + j])
+		data_list_final.append(data_temp)
+		label_list_final.append(one_hot(label_temp[-1]))
+		data_temp = []
+		label_temp = []
 
 	# print(label_list)
 	return data_list_final, label_list_final
@@ -73,13 +76,16 @@ train_data, train_label = data_1 + data_2, label_1 + label_2
 val_data, val_label = data_3, label_3
 test_data, test_label = data_4, label_4
 
+# print(np.shape(data_1), np.shape(data_2), np.shape(train_data))
+# util.RaiseNotDefined()
+
 ####################################################################
 ########### BEGIN : Implementing the RNN-LSTM Model ################
 ####################################################################
 
 #defining the hyperparameter
 training_epoch = 1000
-hidden_nodes = 128
+hidden_nodes = 256
 batch_size = 128
 learning_rate = 0.0001
 dropout_rate = 0.2
@@ -88,7 +94,7 @@ reg_param = 0.1
 
 #now defining the model for the RNN-LSTM
 
-data = tf.placeholder(tf.float32, [None, 5, 25])
+data = tf.placeholder(tf.float32, [None, 6, 25])
 target = tf.placeholder(tf.float32, [None, 5])
 
 with tf.device("/gpu:0"):
@@ -126,15 +132,15 @@ with tf.device("/gpu:0"):
 	#initializing all the trainable parameters here
 	init_op = tf.global_variables_initializer()
 
-f = open("170613_erc_rnn.txt", 'w')
+f = open("170707_erc_rnn_stride6_zscore.txt", 'w')
 f.write("Result of the experiment\n\n")
 
 batch_size_list = [128]
-hidden_layer_list = [128]
+hidden_layer_list = [256]
 learning_rate_list = [1e-3, 1e-4]
 epoch_list_run = [1000]
 dropout_list = [0.9, 0.8, 0.7, 0.5, 0.3]
-regularizer_parameter = [0.001, 0.01, 0.1]
+regularizer_parameter = [0.0001, 0.001, 0.01, 0.1]
 l2Regularize_list = [True]
 
 count_exp = 1
@@ -217,7 +223,7 @@ for batch_size1 in batch_size_list:
 
 								plt.title("Train Acc = " + str(training_accuracy * 100) + "\nTest Acc = " + str(testing_accuracy * 100))
 
-								plt.savefig("170613_fig_rnn Exp " + str(count_exp) + ".png")
+								plt.savefig("170707_fig_rnn_stride6_zscore Exp " + str(count_exp) + ".png")
 
 								plt.clf()
 

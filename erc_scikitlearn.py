@@ -28,6 +28,16 @@ def data_label_preprocess(data_file, label_file):
 			data_list.append([np.float32(i) for i in row])
 	data_csv.close()
 
+	#getting the z-score for the data list
+	data_list = np.transpose(np.asarray(data_list))
+	mean_list = np.mean(data_list, axis = 0)
+	stdev_list = np.std(data_list, axis = 0)
+
+	# data_list = np.transpose(data_list)
+
+	data_list = (data_list - mean_list) / stdev_list
+	data_list = np.clip(np.transpose(data_list), -4, 4)
+
 	#second phase : storing all the label into the appropriate data structure
 	label_f = open(label_file, 'r')
 	for line in label_f:
@@ -69,15 +79,17 @@ def compute_auc(classifier, data_train, label_train, data_set, label_set):
 
 	return sum(auc_list) / float(len(auc_list))
 
-data_list_1, label_list_1 = data_label_preprocess("feature_extraction/finaldb_a5p1_6ch.csv", "ground_truth/a5p1_stage.txt")
-data_list_2, label_list_2 = data_label_preprocess("feature_extraction/finaldb_a5p2_6ch.csv", "ground_truth/a5p2_stage.txt")
-data_list_3, label_list_3 = data_label_preprocess("feature_extraction/finaldb_a5p3_6ch.csv", "ground_truth/a5p3_stage.txt")
-data_list_4, label_list_4 = data_label_preprocess("feature_extraction/finaldb_a5p4_6ch.csv", "ground_truth/a5p4_stage.txt")
+data_1, label_1 = data_label_preprocess("feature_extraction/finaldb_a5p1_6ch.csv", "ground_truth/a5p1_stage.txt")
+data_2, label_2 = data_label_preprocess("feature_extraction/finaldb_a5p2_6ch.csv", "ground_truth/a5p2_stage.txt")
+data_3, label_3 = data_label_preprocess("feature_extraction/finaldb_a5p3_6ch.csv", "ground_truth/a5p3_stage.txt")
+data_4, label_4 = data_label_preprocess("feature_extraction/finaldb_a5p4_6ch.csv", "ground_truth/a5p4_stage.txt")
 
 #forming up the train, val and test dataset
-data_train, label_train = data_list_1 + data_list_2, label_list_1 + label_list_2
-data_val, label_val = data_list_3, label_list_3
-data_test, label_test = data_list_4, label_list_4
+data_train, label_train = np.concatenate((data_1, data_2), axis = 0), label_1 + label_2
+data_val, label_val = data_3, label_3
+data_test, label_test = data_4, label_4
+
+# util.RaiseNotDefined()
 
 #begin the Scikit-Learn module implementation
 

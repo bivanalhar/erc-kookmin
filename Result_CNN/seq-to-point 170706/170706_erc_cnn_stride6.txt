@@ -1,0 +1,602 @@
+Result of the experiment
+
+During the 100-th epoch:
+Training Accuracy = 0.672444
+Validation Accuracy = 0.519362
+Testing Accuracy = 0.440762
+
+During the 200-th epoch:
+Training Accuracy = 0.688
+Validation Accuracy = 0.56492
+Testing Accuracy = 0.485501
+
+During the 300-th epoch:
+Training Accuracy = 0.669778
+Validation Accuracy = 0.561124
+Testing Accuracy = 0.483016
+
+During the 500-th epoch:
+Training Accuracy = 0.748889
+Validation Accuracy = 0.507973
+Testing Accuracy = 0.433306
+
+During the 700-th epoch:
+Training Accuracy = 0.774667
+Validation Accuracy = 0.510251
+Testing Accuracy = 0.433306
+
+During the 1000-th epoch:
+Training Accuracy = 0.779111
+Validation Accuracy = 0.451784
+Testing Accuracy = 0.385253
+
+During the 100-th epoch:
+Training Accuracy = 0.602667
+Validation Accuracy = 0.366743
+Testing Accuracy = 0.355427
+
+During the 200-th epoch:
+Training Accuracy = 0.643111
+Validation Accuracy = 0.439636
+Testing Accuracy = 0.39768
+
+During the 300-th epoch:
+Training Accuracy = 0.561778
+Validation Accuracy = 0.334852
+Testing Accuracy = 0.297432
+
+During the 500-th epoch:
+Training Accuracy = 0.576889
+Validation Accuracy = 0.255125
+Testing Accuracy = 0.266777
+
+During the 700-th epoch:
+Training Accuracy = 0.772
+Validation Accuracy = 0.53303
+Testing Accuracy = 0.450704
+
+During the 1000-th epoch:
+Training Accuracy = 0.488444
+Validation Accuracy = 0.123766
+Testing Accuracy = 0.151616
+
+During the 100-th epoch:
+Training Accuracy = 0.650667
+Validation Accuracy = 0.501139
+Testing Accuracy = 0.428335
+
+During the 200-th epoch:
+Training Accuracy = 0.643556
+Validation Accuracy = 0.40167
+Testing Accuracy = 0.332229
+
+During the 300-th epoch:
+Training Accuracy = 0.707556
+Validation Accuracy = 0.519362
+Testing Accuracy = 0.446562
+
+During the 500-th epoch:
+Training Accuracy = 0.736889
+Validation Accuracy = 0.393318
+Testing Accuracy = 0.372825
+
+During the 700-th epoch:
+Training Accuracy = 0.642667
+Validation Accuracy = 0.551253
+Testing Accuracy = 0.492958
+
+During the 1000-th epoch:
+Training Accuracy = 0.641333
+Validation Accuracy = 0.331815
+Testing Accuracy = 0.294946
+
+During the 100-th epoch:
+Training Accuracy = 0.598222
+Validation Accuracy = 0.395596
+Testing Accuracy = 0.350456
+
+During the 200-th epoch:
+Training Accuracy = 0.670667
+Validation Accuracy = 0.548216
+Testing Accuracy = 0.472245
+
+During the 300-th epoch:
+Training Accuracy = 0.658222
+Validation Accuracy = 0.283979
+Testing Accuracy = 0.300746
+
+During the 500-th epoch:
+Training Accuracy = 0.652889
+Validation Accuracy = 0.544419
+Testing Accuracy = 0.472245
+
+During the 700-th epoch:
+Training Accuracy = 0.643556
+Validation Accuracy = 0.341686
+Testing Accuracy = 0.294118
+
+During the 1000-th epoch:
+Training Accuracy = 0.739111
+Validation Accuracy = 0.333333
+Testing Accuracy = 0.309859
+
+During the 100-th epoch:
+Training Accuracy = 0.621778
+Validation Accuracy = 0.454822
+Testing Accuracy = 0.40348
+
+During the 200-th epoch:
+Training Accuracy = 0.692444
+Validation Accuracy = 0.472285
+Testing Accuracy = 0.428335
+
+During the 300-th epoch:
+Training Accuracy = 0.706222
+Validation Accuracy = 0.522399
+Testing Accuracy = 0.457332
+
+During the 500-th epoch:
+Training Accuracy = 0.752889
+Validation Accuracy = 0.514047
+Testing Accuracy = 0.445733
+
+During the 700-th epoch:
+Training Accuracy = 0.773778
+Validation Accuracy = 0.511769
+Testing Accuracy = 0.437448
+
+During the 1000-th epoch:
+Training Accuracy = 0.779111
+Validation Accuracy = 0.477601
+Testing Accuracy = 0.437448
+
+During the 100-th epoch:
+Training Accuracy = 0.626667
+Validation Accuracy = 0.55429
+Testing Accuracy = 0.464789
+
+During the 200-th epoch:
+Training Accuracy = 0.650222
+Validation Accuracy = 0.531511
+Testing Accuracy = 0.468103
+
+During the 300-th epoch:
+Training Accuracy = 0.674222
+Validation Accuracy = 0.359909
+Testing Accuracy = 0.325601
+
+During the 500-th epoch:
+Training Accuracy = 0.722222
+Validation Accuracy = 0.463933
+Testing Accuracy = 0.352941
+
+During the 700-th epoch:
+Training Accuracy = 0.597778
+Validation Accuracy = 0.313592
+Testing Accuracy = 0.308202
+
+During the 1000-th epoch:
+Training Accuracy = 0.684
+Validation Accuracy = 0.447988
+Testing Accuracy = 0.344656
+
+During the 100-th epoch:
+Training Accuracy = 0.644
+Validation Accuracy = 0.479878
+Testing Accuracy = 0.420878
+
+During the 200-th epoch:
+Training Accuracy = 0.688444
+Validation Accuracy = 0.540623
+Testing Accuracy = 0.465617
+
+During the 300-th epoch:
+Training Accuracy = 0.679111
+Validation Accuracy = 0.552771
+Testing Accuracy = 0.473902
+
+During the 500-th epoch:
+Training Accuracy = 0.672889
+Validation Accuracy = 0.411541
+Testing Accuracy = 0.319801
+
+During the 700-th epoch:
+Training Accuracy = 0.784889
+Validation Accuracy = 0.525437
+Testing Accuracy = 0.440762
+
+During the 1000-th epoch:
+Training Accuracy = 0.807111
+Validation Accuracy = 0.484434
+Testing Accuracy = 0.399337
+
+During the 100-th epoch:
+Training Accuracy = 0.666222
+Validation Accuracy = 0.518603
+Testing Accuracy = 0.442419
+
+During the 200-th epoch:
+Training Accuracy = 0.645333
+Validation Accuracy = 0.397115
+Testing Accuracy = 0.3372
+
+During the 300-th epoch:
+Training Accuracy = 0.702667
+Validation Accuracy = 0.322703
+Testing Accuracy = 0.304888
+
+During the 500-th epoch:
+Training Accuracy = 0.695556
+Validation Accuracy = 0.529233
+Testing Accuracy = 0.448219
+
+During the 700-th epoch:
+Training Accuracy = 0.720889
+Validation Accuracy = 0.470008
+Testing Accuracy = 0.404308
+
+During the 1000-th epoch:
+Training Accuracy = 0.770667
+Validation Accuracy = 0.449506
+Testing Accuracy = 0.378625
+
+During the 100-th epoch:
+Training Accuracy = 0.661778
+Validation Accuracy = 0.545178
+Testing Accuracy = 0.458161
+
+During the 200-th epoch:
+Training Accuracy = 0.68
+Validation Accuracy = 0.443432
+Testing Accuracy = 0.393538
+
+During the 300-th epoch:
+Training Accuracy = 0.636
+Validation Accuracy = 0.468489
+Testing Accuracy = 0.409279
+
+During the 500-th epoch:
+Training Accuracy = 0.727111
+Validation Accuracy = 0.542141
+Testing Accuracy = 0.463132
+
+During the 700-th epoch:
+Training Accuracy = 0.732889
+Validation Accuracy = 0.443432
+Testing Accuracy = 0.379453
+
+During the 1000-th epoch:
+Training Accuracy = 0.796889
+Validation Accuracy = 0.476841
+Testing Accuracy = 0.401823
+
+During the 100-th epoch:
+Training Accuracy = 0.636889
+Validation Accuracy = 0.460137
+Testing Accuracy = 0.423364
+
+During the 200-th epoch:
+Training Accuracy = 0.574667
+Validation Accuracy = 0.250569
+Testing Accuracy = 0.275891
+
+During the 300-th epoch:
+Training Accuracy = 0.681778
+Validation Accuracy = 0.443432
+Testing Accuracy = 0.375311
+
+During the 500-th epoch:
+Training Accuracy = 0.754667
+Validation Accuracy = 0.496583
+Testing Accuracy = 0.425849
+
+During the 700-th epoch:
+Training Accuracy = 0.746222
+Validation Accuracy = 0.427487
+Testing Accuracy = 0.355427
+
+During the 1000-th epoch:
+Training Accuracy = 0.804444
+Validation Accuracy = 0.526196
+Testing Accuracy = 0.450704
+
+During the 100-th epoch:
+Training Accuracy = 0.632444
+Validation Accuracy = 0.470767
+Testing Accuracy = 0.428335
+
+During the 200-th epoch:
+Training Accuracy = 0.657333
+Validation Accuracy = 0.470767
+Testing Accuracy = 0.426678
+
+During the 300-th epoch:
+Training Accuracy = 0.718222
+Validation Accuracy = 0.482916
+Testing Accuracy = 0.406794
+
+During the 500-th epoch:
+Training Accuracy = 0.535556
+Validation Accuracy = 0.254366
+Testing Accuracy = 0.233637
+
+During the 700-th epoch:
+Training Accuracy = 0.751111
+Validation Accuracy = 0.455581
+Testing Accuracy = 0.371168
+
+During the 1000-th epoch:
+Training Accuracy = 0.670667
+Validation Accuracy = 0.336371
+Testing Accuracy = 0.28749
+
+During the 100-th epoch:
+Training Accuracy = 0.544889
+Validation Accuracy = 0.236902
+Testing Accuracy = 0.238608
+
+During the 200-th epoch:
+Training Accuracy = 0.672889
+Validation Accuracy = 0.399393
+Testing Accuracy = 0.348799
+
+During the 300-th epoch:
+Training Accuracy = 0.699111
+Validation Accuracy = 0.461655
+Testing Accuracy = 0.411765
+
+During the 500-th epoch:
+Training Accuracy = 0.736889
+Validation Accuracy = 0.42369
+Testing Accuracy = 0.376139
+
+During the 700-th epoch:
+Training Accuracy = 0.68
+Validation Accuracy = 0.557327
+Testing Accuracy = 0.485501
+
+During the 1000-th epoch:
+Training Accuracy = 0.796
+Validation Accuracy = 0.504176
+Testing Accuracy = 0.429163
+
+During the 100-th epoch:
+Training Accuracy = 0.404444
+Validation Accuracy = 0.144267
+Testing Accuracy = 0.205468
+
+During the 200-th epoch:
+Training Accuracy = 0.603556
+Validation Accuracy = 0.566439
+Testing Accuracy = 0.501243
+
+During the 300-th epoch:
+Training Accuracy = 0.711556
+Validation Accuracy = 0.526196
+Testing Accuracy = 0.459818
+
+During the 500-th epoch:
+Training Accuracy = 0.378667
+Validation Accuracy = 0.180714
+Testing Accuracy = 0.212925
+
+During the 700-th epoch:
+Training Accuracy = 0.724
+Validation Accuracy = 0.523918
+Testing Accuracy = 0.458989
+
+During the 1000-th epoch:
+Training Accuracy = 0.710667
+Validation Accuracy = 0.497342
+Testing Accuracy = 0.437448
+
+During the 100-th epoch:
+Training Accuracy = 0.642667
+Validation Accuracy = 0.526196
+Testing Accuracy = 0.438277
+
+During the 200-th epoch:
+Training Accuracy = 0.661333
+Validation Accuracy = 0.548216
+Testing Accuracy = 0.468103
+
+During the 300-th epoch:
+Training Accuracy = 0.685333
+Validation Accuracy = 0.539104
+Testing Accuracy = 0.468931
+
+During the 500-th epoch:
+Training Accuracy = 0.742667
+Validation Accuracy = 0.35915
+Testing Accuracy = 0.316487
+
+During the 700-th epoch:
+Training Accuracy = 0.64
+Validation Accuracy = 0.460137
+Testing Accuracy = 0.40348
+
+During the 1000-th epoch:
+Training Accuracy = 0.790667
+Validation Accuracy = 0.460896
+Testing Accuracy = 0.400166
+
+During the 100-th epoch:
+Training Accuracy = 0.539556
+Validation Accuracy = 0.253607
+Testing Accuracy = 0.250207
+
+During the 200-th epoch:
+Training Accuracy = 0.689778
+Validation Accuracy = 0.510251
+Testing Accuracy = 0.435791
+
+During the 300-th epoch:
+Training Accuracy = 0.670667
+Validation Accuracy = 0.371298
+Testing Accuracy = 0.327258
+
+During the 500-th epoch:
+Training Accuracy = 0.724889
+Validation Accuracy = 0.438117
+Testing Accuracy = 0.378625
+
+During the 700-th epoch:
+Training Accuracy = 0.690222
+Validation Accuracy = 0.556568
+Testing Accuracy = 0.491301
+
+During the 1000-th epoch:
+Training Accuracy = 0.782667
+Validation Accuracy = 0.485953
+Testing Accuracy = 0.38691
+
+During the 100-th epoch:
+Training Accuracy = 0.628889
+Validation Accuracy = 0.487472
+Testing Accuracy = 0.393538
+
+During the 200-th epoch:
+Training Accuracy = 0.713333
+Validation Accuracy = 0.505695
+Testing Accuracy = 0.441591
+
+During the 300-th epoch:
+Training Accuracy = 0.745778
+Validation Accuracy = 0.511769
+Testing Accuracy = 0.438277
+
+During the 500-th epoch:
+Training Accuracy = 0.76
+Validation Accuracy = 0.526196
+Testing Accuracy = 0.46396
+
+During the 700-th epoch:
+Training Accuracy = 0.708
+Validation Accuracy = 0.538345
+Testing Accuracy = 0.483016
+
+During the 1000-th epoch:
+Training Accuracy = 0.68
+Validation Accuracy = 0.328777
+Testing Accuracy = 0.317316
+
+During the 100-th epoch:
+Training Accuracy = 0.607111
+Validation Accuracy = 0.479119
+Testing Accuracy = 0.401823
+
+During the 200-th epoch:
+Training Accuracy = 0.522222
+Validation Accuracy = 0.2612
+Testing Accuracy = 0.275062
+
+During the 300-th epoch:
+Training Accuracy = 0.588
+Validation Accuracy = 0.366743
+Testing Accuracy = 0.310688
+
+During the 500-th epoch:
+Training Accuracy = 0.716889
+Validation Accuracy = 0.320425
+Testing Accuracy = 0.315659
+
+During the 700-th epoch:
+Training Accuracy = 0.719556
+Validation Accuracy = 0.312073
+Testing Accuracy = 0.314002
+
+During the 1000-th epoch:
+Training Accuracy = 0.773333
+Validation Accuracy = 0.404708
+Testing Accuracy = 0.361226
+
+During the 100-th epoch:
+Training Accuracy = 0.619556
+Validation Accuracy = 0.564161
+Testing Accuracy = 0.491301
+
+During the 200-th epoch:
+Training Accuracy = 0.613778
+Validation Accuracy = 0.317388
+Testing Accuracy = 0.328915
+
+During the 300-th epoch:
+Training Accuracy = 0.725778
+Validation Accuracy = 0.461655
+Testing Accuracy = 0.405965
+
+During the 500-th epoch:
+Training Accuracy = 0.76
+Validation Accuracy = 0.511769
+Testing Accuracy = 0.429992
+
+During the 700-th epoch:
+Training Accuracy = 0.702667
+Validation Accuracy = 0.313591
+Testing Accuracy = 0.307374
+
+During the 1000-th epoch:
+Training Accuracy = 0.732
+Validation Accuracy = 0.53303
+Testing Accuracy = 0.439934
+
+During the 100-th epoch:
+Training Accuracy = 0.622222
+Validation Accuracy = 0.539104
+Testing Accuracy = 0.452361
+
+During the 200-th epoch:
+Training Accuracy = 0.670667
+Validation Accuracy = 0.531511
+Testing Accuracy = 0.443248
+
+During the 300-th epoch:
+Training Accuracy = 0.619555
+Validation Accuracy = 0.287016
+Testing Accuracy = 0.272577
+
+During the 500-th epoch:
+Training Accuracy = 0.630667
+Validation Accuracy = 0.503417
+Testing Accuracy = 0.41425
+
+During the 700-th epoch:
+Training Accuracy = 0.524
+Validation Accuracy = 0.257403
+Testing Accuracy = 0.241922
+
+During the 1000-th epoch:
+Training Accuracy = 0.742222
+Validation Accuracy = 0.432042
+Testing Accuracy = 0.347142
+
+During the 100-th epoch:
+Training Accuracy = 0.588889
+Validation Accuracy = 0.291572
+Testing Accuracy = 0.292461
+
+During the 200-th epoch:
+Training Accuracy = 0.527111
+Validation Accuracy = 0.249051
+Testing Accuracy = 0.239437
+
+During the 300-th epoch:
+Training Accuracy = 0.625333
+Validation Accuracy = 0.425209
+Testing Accuracy = 0.357084
+
+During the 500-th epoch:
+Training Accuracy = 0.715556
+Validation Accuracy = 0.428246
+Testing Accuracy = 0.373654
+
+During the 700-th epoch:
+Training Accuracy = 0.742667
+Validation Accuracy = 0.444951
+Testing Accuracy = 0.360398
+
+During the 1000-th epoch:
+Training Accuracy = 0.812889
+Validation Accuracy = 0.520121
+Testing Accuracy = 0.44739
+
